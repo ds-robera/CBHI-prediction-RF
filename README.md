@@ -8,6 +8,7 @@ One of the significant challenges we encountered was class imbalance, where cert
 •	Resampled dataset shape: Counter({0.0: 8371, 1.0: 8371}).
 Model Training and Selection
 We trained a Random Forest classifier on the resampled data. The Random Forest algorithm was chosen based on literature and for its robustness and ability to handle large datasets with many features.
+![image](https://github.com/user-attachments/assets/bbe8a091-32ce-4f42-8647-d35da998d558)
 
 ## Feature importance
  
@@ -15,9 +16,12 @@ The features importance derived from the model highlight the relative significan
 
 ## Model Evaluation
 To evaluate the models, we used multiple metrics including accuracy, F1-score, precision, recall, and AUC-ROC. Despite achieving high accuracy scores, the model's performance on the minority class was suboptimal. 
+![image](https://github.com/user-attachments/assets/c33d94e5-8fe1-4814-bf73-025653c6535c)
+![image](https://github.com/user-attachments/assets/ae3aae5e-6afa-469a-aab3-781291a95de0)
 
 Despite the high accuracy of 90%, the detailed performance metrics reveal significant issues: for class 0, we achieved a precision of 0.96, recall of 0.93, and F1-score of 0.95 on a support of 3588 samples. In contrast, for class 1, the precision was only 0.24, recall was 0.34, and F1-score was 0.28 on a support of 219 samples. This disparity highlights that while the model performs well overall, it struggles with the minority class. The macro average scores of 0.60 (precision), 0.64 (recall), and 0.61 (F1-score), along with the weighted averages, further emphasize the imbalance in performance.
- 
+![image](https://github.com/user-attachments/assets/eddb9c32-88e1-4974-beb8-d435c4cc194a)
+
 The ROC curve for our Random Forest classification model, with an AUC of 0.81, indicated good discriminatory power. The ROC curve's orange line, significantly above the blue dashed diagonal, shows the model performs much better than random guessing. However, the curve is not perfect, indicating room for improvement.
 This suggests the need for further optimization or alternative methods to enhance performance. Strategies to consider include fine-tuning model parameters, exploring ensemble methods, implementing cost-sensitive learning, and further data augmentation. By integrating these insights with the ROC curve analysis and detailed evaluation metrics, we have a comprehensive understanding of our Random Forest model's performance and the next steps for improving results, particularly for the minority class. 
 
