@@ -8,12 +8,11 @@ One of the significant challenges we encountered was class imbalance, where cert
 •	Resampled dataset shape: Counter({0.0: 8371, 1.0: 8371}).
 Model Training and Selection
 We trained a Random Forest classifier on the resampled data. The Random Forest algorithm was chosen based on literature and for its robustness and ability to handle large datasets with many features.
-![image](https://github.com/user-attachments/assets/bbe8a091-32ce-4f42-8647-d35da998d558)
 
 ## Feature importance
  
 The features importance derived from the model highlight the relative significance of various factors in predicting the target variable. "Region" emerges as the most influential feature, indicating that regional location plays a crucial role in the model's predictions. Following this, "Educational level" and "Wealth index combined" are also substantial contributors, suggesting that socioeconomic factors significantly impact the outcome. "Total children ever born" and "Occupation (grouped)" further add to the model's predictive power, emphasizing the relevance of demographic and occupational characteristics. Other factors, such as "Type of place of residence," "Number of wives/partners," and "Currently working," exhibit moderate importance, while "Usual resident or visitor" is the least influential. This distribution of features importance provides valuable insights into the key drivers of the model, aiding in the understanding of which variables most affect the predictions. 
-
+![image](https://github.com/user-attachments/assets/bbe8a091-32ce-4f42-8647-d35da998d558)
 ## Model Evaluation
 To evaluate the models, we used multiple metrics including accuracy, F1-score, precision, recall, and AUC-ROC. Despite achieving high accuracy scores, the model's performance on the minority class was suboptimal. 
 ![image](https://github.com/user-attachments/assets/c33d94e5-8fe1-4814-bf73-025653c6535c)
